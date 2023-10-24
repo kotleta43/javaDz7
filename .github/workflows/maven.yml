@@ -2,20 +2,17 @@ name: Java CI with Maven
 
 on: [push, pull_request]
 
-  # Allows you to run this workflow manually from the Actions tab
- 
 jobs:
+  build:
 
-build:
+    runs-on: ubuntu-latest
 
-runs-on: ubuntu-latest
-
-steps:
-- uses: actions/checkout@v2
-- name: Set up JDK 11
-  uses: actions/setup-java@v2
-  with: 
-    java-version: '11'
-    distribution: 'abopt'
-- name: Bild with Maven
-  run: mvn -B -e verifi
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with: 
+       java-version: '11'
+       distribution: 'abopt'
+    - name: Bild with Maven
+      run: mvn -B -e verifi
