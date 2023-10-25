@@ -13,6 +13,6 @@ jobs:
       uses: actions/setup-java@v2
       with: 
        java-version: '11'
-       distribution: 'abopt'
+       distribution: 'adopt'
     - name: Bild with Maven
       run: mvn -B -e verifi
